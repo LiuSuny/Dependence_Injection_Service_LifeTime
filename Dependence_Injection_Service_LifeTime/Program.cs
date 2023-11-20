@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-// Next we registed our services to independent container using builder and ADD
+// Next we registed our services to dependent injection container using builder and ADD e.g AddSingleton as the lifetime
 builder.Services.AddSingleton<ISingletonService, SingletonService>();
 builder.Services.AddTransient<ITransientServce, TransientService>();
 builder.Services.AddScoped<IScopedService, ScopedService>();
